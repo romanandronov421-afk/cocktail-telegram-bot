@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор Коктейлей</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍹 Конструктор Коктейлей</h1>
+            <p class="subtitle">Найдите идеальный коктейль на основе ваших ингредиентов</p>
+        </header>
+
+        <div class="input-section">
+            <textarea id="ingredients-input" placeholder="Введите ваши ингредиенты через запятую (например: водка, лимонный сок, сахарный сироп)..."></textarea>
+            <button id="find-cocktail-btn">Найти коктейли</button>
+        </div>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label>Тип напитка:</label>
+                <select id="drink-type">
+                    <option value="all">Все</option>
+                    <option value="alcoholic">Алкогольные</option>
+                    <option value="non-alcoholic">Безалкогольные</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Сложность:</label>
+                <select id="difficulty">
+                    <option value="all">Все</option>
+                    <option value="easy">Простой</option>
+                    <option value="medium">Средний</option>
+                    <option value="hard">Сложный</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>Подходящие коктейли</h2>
+            <div id="results-count"></div>
+            <div id="results"></div>
+        </div>
+
+        <div class="featured-section">
+            <h2>Классические коктейли</h2>
+            <div id="featured-cocktails" class="cocktails-grid"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
